@@ -26,13 +26,13 @@ def get_filters():
     month = input("Choose a month (all, january, february, ... , june)").lower()
     while month not in ('all', 'january', 'february', 'march', 'april', 'may' , 'june'):
         print("Not valid month, try again")
-        city = input("Choose a month (all, january, february, ... , june)").lower()
+        month = input("Choose a month (all, january, february, ... , june)").lower()
         
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input("Choose a day of the week (all, monday, tuesday, ... sunday)").lower()
     while day not in ('all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'):
         print("Not valid day, try again")
-        city = input("Choose a day of the week (all, monday, tuesday, ... sunday)").lower()
+        day = input("Choose a day of the week (all, monday, tuesday, ... sunday)").lower()
         
     print('-'*40)
     return city, month, day
@@ -167,18 +167,20 @@ def seedata(df):
 
 def main():
     while True:
-        #city, month, day = get_filters()
-        city, month, day = ('washington', 'june', 'monday')
+        city, month, day = get_filters()
+        #city, month, day = ('washington', 'june', 'monday')
         df = load_data(city, month, day)
-        print(df.columns)
-        print(df.head(8))
+        
+        #print(df.head(8))
+        seedata(df)
 
+        print('-'*40)
+        print("\nDisplaying statistics of your selected dataframe")
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
 
-        seedata(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
