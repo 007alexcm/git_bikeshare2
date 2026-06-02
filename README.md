@@ -10,8 +10,8 @@ Bikeshare study in 3 cities
 It is a python project in which the program ask for a city, month and day input just to check and get some statistics of the use of shared bikes.
 
 ### Files used
-Include the files used
+To run succesfully you will need the city files not included in this repository (chicago.csv, new_york_city.csv and washington.csv).
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+This project has been initiated following _Udacity_ guidelines.
 
