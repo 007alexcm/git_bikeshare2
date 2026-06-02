@@ -161,15 +161,17 @@ def main():
         city, month, day = get_filters()
         #city, month, day = ('washington', 'june', 'monday')
         df = load_data(city, month, day)
-        print(df.columns)
-        print(df.head(8))
+        
+        #print(df.head(8))
+        seedata(df)
 
+        print('-'*40)
+        print("\nDisplaying statistics of your selected dataframe")
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
 
-        seedata(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
