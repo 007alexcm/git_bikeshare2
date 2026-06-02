@@ -158,8 +158,8 @@ def seedata(df):
 
 def main():
     while True:
-        #city, month, day = get_filters()
-        city, month, day = ('washington', 'june', 'monday')
+        city, month, day = get_filters()
+        #city, month, day = ('washington', 'june', 'monday')
         df = load_data(city, month, day)
         print(df.columns)
         print(df.head(8))
