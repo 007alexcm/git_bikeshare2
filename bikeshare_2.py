@@ -41,6 +41,10 @@ def get_filters():
 
 
 def load_data(city, month, day):
+    """
+    According to city, month and day provided it
+    returns the dataframe already filtered to work with
+    """
     
     df = pd.read_csv(CITY_DATA[city])	
     df['Start Time'] = pd.to_datetime(df['Start Time'])
@@ -146,6 +150,11 @@ def user_stats(df):
 
 
 def seedata(df):
+    """
+    It displays the data in 5 lines steps, 
+    previously asking the user
+    """
+    
     line = 0
     n = 5
     answer = input(f"Would you like to see {n} lines of your studied data? ('y' or 'n')").lower()
