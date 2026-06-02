@@ -4,10 +4,10 @@
 This project and README file were created on June 2nd, 2026.
 
 ### Project Title
-Replace the Project Title
+Bikeshare study in 3 cities
 
 ### Description
-Describe what your project is about and what it does
+It is a python project in which the program ask for a city, month and day input just to check and get some statistics of the use of shared bikes.
 
 ### Files used
 Include the files used
